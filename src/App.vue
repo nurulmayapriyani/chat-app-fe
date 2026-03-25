@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import ChatRoom from './components/ChatRoom.vue'
+import ChatRoomRiyani from "./components/ChatRoomRiyani.vue";
+import CHatRoomMay from "./components/ChatRoomMay.vue";
 
 // Solution of Socket Listeners in Child Components
 
@@ -27,8 +28,9 @@ import ChatRoom from './components/ChatRoom.vue'
     </div> -->
   </header>
 
-  <main>
-    <ChatRoom/>
+  <main class="chat-wrapper">
+    <ChatRoomRiyani />
+    <CHatRoomMay />
   </main>
 </template>
 
@@ -45,7 +47,7 @@ header {
 */
 
 @media (min-width: 1024px) {
-/*
+  /*
   header {
     display: flex;
     place-items: center;
@@ -65,6 +67,12 @@ header {
 
   h1 {
     color: black;
+  }
+
+  .chat-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
   }
 }
 </style>
