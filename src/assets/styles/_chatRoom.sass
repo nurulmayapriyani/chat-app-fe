@@ -28,23 +28,25 @@
 
     .chat-bubble 
       display: flex
-      align-items: center
+      align-items: flex-end
       gap: 0.5rem
+      width: fit-content
+
+      &.right
+        align-self: flex-end
+
+      &.left
+        align-self: flex-start
 
       &.may 
-        flex-direction: row
-        justify-content: flex-end
-
         .message 
           background: #A84100
           color: #FFFFFF
-          align-self: flex-end
-    
 
-      &.riyani .message 
-        background: #E2986A 
-        color: #000000
-      
+      &.riyani 
+        .message 
+          background: #E2986A 
+          color: #000000
 
       .avatar 
         width: 36px
