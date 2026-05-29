@@ -13,7 +13,7 @@ export const state = reactive<State>({
   barEvents: [],
 });
 
-const URL: string | undefined = process.env.NODE_ENV === "production" ? undefined : "http://localhost:3000";
+const URL: string = import.meta.env.VITE_BACKEND_URL;
 
 export const socket: Socket = io(URL, { autoConnect: false }
 // Solution of Temporary Disconnections
